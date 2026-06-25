@@ -11,5 +11,6 @@ Tech stack:
 Environment variables (backend): see `backend/.env.example`.
 
 Deploy:
-- Frontend: set `VITE_BACKEND_URL` to your backend URL and deploy to Vercel.
-- Backend: create a Render Web Service, set `MONGODB_URI`, `BACKEND_URL`, `FRONTEND_URL`, and SMTP credentials.
+- Frontend:https://lead-management-system-nine-tan.vercel.app 
+- Backend: https://lead-management-system-2-w9ca.onrender.com
+

@@ -1,4 +1,6 @@
-const BACKEND = import.meta.env.VITE_BACKEND_URL || 'https://lead-management-system-t1j6.onrender.com/'
+const BACKEND =
+  import.meta.env.VITE_BACKEND_URL ||
+  "https://lead-management-system-2-w9ca.onrender.com";
 
 export async function submitLead(payload){
   const res = await fetch(`${BACKEND}/api/leads`, {

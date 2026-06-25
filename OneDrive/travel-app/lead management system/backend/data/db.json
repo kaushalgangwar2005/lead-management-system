@@ -1,0 +1,26 @@
+{
+  "leads": [
+    {
+      "_id": "b82d74de5c810413c5d1ba39",
+      "fullName": "Test User",
+      "email": "test@example.com",
+      "phone": "1234",
+      "company": "Acme",
+      "requirement": "Test requirement",
+      "createdAt": "2026-06-25T10:10:47.356Z",
+      "emailSent": true,
+      "emailId": "2dd1963917723675c97029b1",
+      "events": [
+        {
+          "type": "open",
+          "createdAt": "2026-06-25T10:11:36.812Z"
+        },
+        {
+          "type": "click",
+          "url": "https://example.com",
+          "createdAt": "2026-06-25T10:12:00.048Z"
+        }
+      ]
+    }
+  ]
+}

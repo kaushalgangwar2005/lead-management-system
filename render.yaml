@@ -1,0 +1,38 @@
+# Render manifests for deploying backend (Web Service) and frontend (Static Site)
+# Replace placeholders and connect this repository in Render's dashboard.
+
+services:
+  - type: web
+    name: lead-backend
+    env: node
+    plan: free
+    region: oregon
+    repo: <REPO-URL>
+    branch: main
+    buildCommand: "cd backend && npm install"
+    startCommand: "cd backend && npm start"
+    envVars:
+      - key: MONGODB_URI
+        value: "${MONGODB_URI}"
+      - key: BACKEND_URL
+        value: "${BACKEND_URL}"
+      - key: FRONTEND_URL
+        value: "${FRONTEND_URL}"
+      - key: SMTP_HOST
+        value: "${SMTP_HOST}"
+      - key: SMTP_PORT
+        value: "${SMTP_PORT}"
+      - key: SMTP_USER
+        value: "${SMTP_USER}"
+      - key: SMTP_PASS
+        value: "${SMTP_PASS}"
+
+static_sites:
+  - name: lead-frontend
+    repo: <REPO-URL>
+    branch: main
+    buildCommand: "cd frontend && npm install && npm run build"
+    publishPath: "frontend/dist"
+    envVars:
+      - key: VITE_BACKEND_URL
+        value: "${VITE_BACKEND_URL}"
